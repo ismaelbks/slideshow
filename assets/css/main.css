@@ -1,0 +1,168 @@
+@media screen and (min-width: 576px) {
+  html, body {margin: 0; height: 100%; overflow: hidden}
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.mainSection {
+  padding: 0;
+  margin-top: 50px;
+}
+
+#slideWrapper {
+  min-height: 100vh;
+}
+
+#window {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#rail {
+  position: relative;
+  font-size: 0;
+}
+
+.slide {
+  height: 600px;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+}
+
+/* @media screen and (max-width: 992px) {
+  #window,
+  .slide {
+    width: calc(940px * (6 / 12));
+    height: calc(600px * (6 / 12));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #window,
+  .slide {
+    width: calc(940px * (6 / 12));
+    height: calc(600px * (6 / 12));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #window,
+  .slide {
+    width: calc(940px * (4 / 12));
+    height: calc(600px * (4 / 12));
+  }
+} */
+
+.slide .inner {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 40px;
+}
+
+.slide[position="1"]  {
+  background-color: #a7dbd8;
+}
+
+.slide[position="2"] {
+  background-color: #69d2e7;
+}
+
+.slide[position="3"] {
+  background-color: #e0e4cc;
+}
+
+.slide[position="4"] {
+  background-color: #f38630;
+}
+
+.slide[position="5"]  {
+  background-color: #fa6900;
+}
+
+.slide[position="6"] {
+  background-color: #c0d6e4;
+}
+
+.slide[position="7"] {
+  background-color: #fb9692;
+}
+
+.slide[position="8"] {
+  background-color: #fab297;
+}
+
+.currentSlide {
+}
+
+#btnWrapper {
+  height: 70px;
+  display: flex;
+  text-align: center;
+}
+
+#btnWrapper .inner {
+  margin: auto;
+}
+
+#btnWrapper button {
+  color: #009a7f;
+  font-size: 35px;
+}
+
+#btnWrapper button {
+  color: #009a7f;
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+#btnWrapper button:focus {
+  box-shadow: none !important;
+}
+/* Customizations */
+
+/* progressBar */
+#progressBarWrapper .progress {
+  border-radius: 0;
+  height: 5px;
+}
+
+#progressBarWrapper {
+  display: none;
+  margin-top: 20px;
+}
+
+#slideWrapper[progressBar='on'] #progressBarWrapper {
+  display: block !important;
+}
+/* end progressBar */
+
+
+/* CenterMode */
+#slideWrapper[centerMode='on'] #window {
+  overflow-x: visible !important;
+  box-shadow: none;
+}
+
+
+#slideWrapper[centerMode='on'] .slide {
+  transition: 0.5s;
+}
+
+#slideWrapper[centerMode='on'] .currentSlide {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: 0.90s;
+}
+
+#slideWrapper[centerMode='on'] .slide:not(.currentSlide) {
+  opacity: 0.3;
+  transition: 0.5s;
+}
+/* End centerMode */
